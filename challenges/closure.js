@@ -29,4 +29,4 @@ function summation(number){
     console.log(counter)
   }
 }
-console.log(summation(4));
+summation(4);
