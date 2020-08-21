@@ -28,5 +28,6 @@ function summation(number){
     counter = (i+1) + counter
     console.log(counter)
   }
+  console.log(counter)
 }
 summation(4);

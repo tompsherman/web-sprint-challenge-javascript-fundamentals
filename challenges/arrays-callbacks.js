@@ -31,6 +31,14 @@ zooAnimals.forEach(function(item){
 
 console.log(displayNames);
 
+//-------arrow function-------//
+
+const displayNamesArrow = [];
+
+zooAnimals.forEach(item => displayNamesArrow.push(`Name: ${item.animal_name}, Scientific: ${item.scientific_name}`))
+
+console.log(displayNamesArrow)
+
 /* Request 2: .map()
 
 The zoos need a list of all their animal's names (animal_name only) converted to lower case. Using map, create a new array of strings named lowCaseAnimalNames, each string following this pattern: "jackal, asiatic". Log the resut.
@@ -44,6 +52,12 @@ const lowCaseAnimalNames = zooAnimals.map(function(item){
 
 console.log(lowCaseAnimalNames);
 
+//-------arrow function-------//
+
+const lowCaseAnimalNamesArrow = zooAnimals.map(item => item.animal_name.toLowerCase())
+
+console.log(lowCaseAnimalNamesArrow);
+
 /* Request 3: .filter() 
 
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
@@ -53,6 +67,13 @@ const lowPopulationAnimals = zooAnimals.filter(function(item){
   return item.population < 5
 });
 console.log(lowPopulationAnimals);
+
+//-------arrow function-------//
+
+const lowPopulationAnimalsArrow = zooAnimals.filter(item => item.population < 5)
+
+console.log(lowPopulationAnimalsArrow);
+
 
 /* Request 4: .reduce() 
 
@@ -68,6 +89,11 @@ let populationTotal = zooAnimals.reduce(function(acc, item){
 
 console.log(populationTotal);
 
+//-------arrow function-------//
+
+let populationTotalArrow = zooAnimals.reduce ((acc, item) => acc + item.population, 0)
+
+console.log(populationTotalArrow);
 
 // ==== Callbacks ====  
 
